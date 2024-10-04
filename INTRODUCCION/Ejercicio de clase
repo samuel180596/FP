@@ -1,0 +1,44 @@
+// enteros.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
+//
+
+#include <iostream>
+#include <limits>
+#include <iomanip>
+#include <locale>
+#include <string>
+using namespace std;
+
+int main() 
+{
+    //Manejo de punto decimal y separador de miless
+    locale loc("");
+    cout.imbue(loc);
+    // Declarar e imprimir una variable de string
+    string texto0 = "Hola Mundo";
+    cout << texto0 << endl;
+    // Union de dos variables
+    // Tipo string
+    string tipoa = "Hello";
+    string tipob = "World";
+    string saludo = tipoa + tipob;
+    cout << saludo << endl;
+    // introducir un valor en una variable tipo string
+    string nombre;
+    cout << "introduce tu Nombre : ";
+    cin >> nombre;
+    cout << "Hola " << nombre << endl;
+    // Ingresa una linea
+    cin.ignore();
+    string nombreCompleto;
+    cout << "dame tu nombre completo";
+    getline(cin, nombreCompleto);
+    cout << "tu nombre completo : ";
+    cout<< nombreCompleto << endl;
+    //Acceso a un caracter especifico
+    cout << nombre[0] << endl;
+
+
+
+
+    return 0;
+}
