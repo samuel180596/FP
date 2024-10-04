@@ -20,4 +20,4 @@
 _TEXTO ITALIKA_
 ***NEGRITA ITALIKA***
 
-![EL ANILLO DEL PODER]([https://www.google.com/url?sa=i&url=https%3A%2F%2Felanillounico.com%2Fnoticias%2Fmundo-tolkien%2Fhoy-en-la-tierra-media-25-de-octubre-6%2F&psig=AOvVaw3ntC9H9RfRV5yCjyYzkvM7&ust=1728088362000000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIC9id6884gDFQAAAAAdAAAAABAE](https://articles-img.sftcdn.net/t_article_cover_xl/auto-mapping-folder/sites/2/2023/07/the-one-ring-encontrado.jpg))
+![EL ANILLO DEL PODER](https://articles-img.sftcdn.net/t_article_cover_xl/auto-mapping-folder/sites/2/2023/07/the-one-ring-encontrado.jpg)
