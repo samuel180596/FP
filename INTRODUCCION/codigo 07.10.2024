@@ -1,0 +1,72 @@
+// sam.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
+//
+
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <iomanip>
+#include <algorithm>
+using namespace std;
+int main()
+{
+    //1Declarar e imprimir un texto
+
+    string texto0 = "Hola, mundo!";
+    cout << texto0 << endl;
+
+    // Unir dos textos en uno
+
+    string textoa = "Hola, ";
+    string textob = "mundo!";
+    string saludo = textoa + textob;
+    cout << saludo << endl;
+
+
+    // Introducir un valor en una variable de texto (string)
+    // usando el teclado
+
+    string nombre;
+    cout << "Introduce tu nombre: ";
+    cin >> nombre;
+    cout << "Hola, " << nombre << "!" << endl;
+
+
+    // Introducir una linea completa de texto (string)
+    cin.ignore();
+    string nombreCompleto;
+    cout << "Introduce tu nombre completo:  ";
+    getline(cin, nombreCompleto);
+    cout << "tu nombre completo : " << nombreCompleto << endl;
+    
+    //7. cambiar un caracter, en una posicion especifica.
+    string cambio = "Texto";
+    cambio[0] = 't';
+    cout << cambio << endl;
+
+    //8. convertir un string a minusculas
+    string texto8 = "HOLA MUNDO";
+    transform(texto8.begin(), texto8.end(), texto8.begin(), ::tolower);
+    cout << texto8 << endl;
+
+    //9. CONVERTIR UN STRING A MAYUSCULAS
+    string texto9 = "hola mundo";
+    transform(texto9.begin(), texto9.end(), texto9.begin(), ::toupper);
+    cout << texto9 << endl;
+
+    //10. Inserta un Texto dentro de otro
+    string texto10 = "Samuel";
+    texto10.insert(6, "Mahonrry");
+    cout << texto10 << endl;
+    
+    //11. convertir un numero entero a string
+    int numero1 = 123;
+    string texto11 = to_string(numero1);
+    cout << texto11 + "texto" << endl;
+
+    //12. converitr strinf a numero entero
+    string texto12 = "123";
+    int numero2 = stoi(texto12);
+    cout << "string como numero : " << numero2 << endl;
+
+
+}
