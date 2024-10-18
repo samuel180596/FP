@@ -1,0 +1,57 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	// operadores logicos
+	cout << boolalpha;
+
+	bool p = true, q = false;
+	// 1. logico and
+	cout << "(p and q)" << (p and q) << endl;
+	//2. logico or 
+	cout << "(p or q)" << (p or q) << endl;
+	//3. logico not
+	cout << "(!p): " << (not(p)) << endl;
+	//4. combinaciones and y not
+	cout << "(p and not (q)): " << (p and not (q)) << endl;
+	//5. doble not
+	cout << "(not(not(q)))" << (not(not(q))) << endl;
+	//6.operaciones mixtas
+	cout << "(not(p and q) or (p or not (q)) " << (not(p and q) or (p or not (q))) << endl;
+	//7. asignaciones de variables con operadores logicos
+	bool a = p and q;
+	cout << "Valor asignado a variable " << a << endl;
+	// 8 . operaciones logicas con numeros enteros
+	int x = 5, y = 0;
+	cout << "(x and y):  " << (x and y) << endl;
+	//9. operaciones logicas con tipos de numeros
+	float m = 3.5, n = 0.0;
+	cout << "(m or n):  " << (m or n) << endl;
+	//10. expreciones complejas
+	cout << "((x and not (y)) and (m or not (q))): " << ((x and not (y)) and (m or not (q))) << endl;
+	//11. cadenas de textos (strings)
+	string str1 = "Samuel ";
+	string str2 = "Rocha  ";
+	cout << (str1 == str2) << endl;
+	cout << (str1 != str2) << endl;
+	cout << ((str1 != "") and (str2 != "")) << endl;
+	// if else encontrar si un numero es par o impar
+	int num = 0;
+	cout << " ingresa un numero:  ";
+	cin >> num;
+	cout << endl;
+	if (num % 2 == 0)
+	{
+		cout << " Es par " << endl;
+
+	}
+	else
+	{ 
+		cout << "Es impar " << endl;
+	}
+
+
+
+}
