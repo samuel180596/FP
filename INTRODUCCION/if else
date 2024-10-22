@@ -1,0 +1,99 @@
+// if else.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
+//
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	// if else encontrar si un numero es par o impar
+	int num = 0;
+	cout << " ingresa un numero:  ";
+	cin >> num;
+	cout << endl;
+	if (num % 2 == 0)
+	{
+		cout << " Es par " << endl;
+
+	}
+	else
+	{
+		cout << "Es impar " << endl;
+	}
+	// 2.Encontrar el mayor de dos números, solicita los dos números de tipo int
+	int n1, n2;
+	cout << " ingresa un numero:  ";
+	cin >> n1;
+	cout << endl;
+	cout << "ingresa otro numero:  ";
+	cin >> n2;
+	cout << endl;
+	if (n1 > n2)
+	{
+		cout << "n1 Mayor: " << endl;
+
+	}
+	else
+	{
+		cout << "n2 mayor:  " << endl;
+	}
+	//3.Solicitar la edad de la persona y si esta es mayor de edad, escribir en pantalla “Mayor de edad” de lo contrario “Menor de edad”
+	int edad;
+	cout << "ingresa tu edad:  " << endl;
+	cin >> edad;
+	cout << endl;
+	if (edad >= 18)
+	{
+		cout << "Eres Mayor de edad ." << endl;
+	}
+	else
+	{
+		cout << "Eres Menor de edad ." << endl;
+	}
+	//4. Solicitar la temperatura si esta es menor a 10 grados, escribir en pantalla “hace mucho frío”, si la temperatura es entre mayor a 10 grados y menor a 17 grados, escribir en pantalla “hace frío” y por último si es mayor a 17 grados, escribir en pantalla “el clima es templado”
+	int Temp;
+	cout << "Ingresa la temperatura:  " << endl;
+	cin >> Temp;
+	cout << endl;
+	if (Temp <= 10)
+	{
+		cout << "Hace Mucho Frio. " << endl;
+	}
+	else if ((Temp >= 10) and (Temp < 17))
+	{
+		cout << "Hace Frio ." << endl;
+	}
+	else
+	{
+		cout << "El clima esta Templado ." << endl;
+
+	}
+	//5.Preguntar si al usuario si está a favor de la paz, guardar en una variable tipo char llamada voto, validar si el voto es ‘S’ o el voto es ‘N’ escribir en pantalla “voto valido” en caso de que sea cualquier otro carácter escribir, “voto invalido”
+	char voto;
+	cout << "Estas a Favor de la Paz" << endl;
+	cin >> voto;
+	cout << endl;
+	if ((voto == 'S') or (voto == 'N'))
+	{
+		cout << "voto valido" << endl;
+	}
+	else 
+	{
+		cout << "voto invalido" << endl;
+	}
+	//6.Preguntar al usuario cuantas horas ha trabajado el empleado durante la semana, si, el empleado trabajo más de 40 horas, el excedente de horas se multiplicará por 75 pesos y publicar este cálculo en pantalla que será el bono del empleado.
+	int HT;
+	cout << "Cuantas Horas Has Trabajado?.:  " << endl;
+	cin >> HT;
+	cout << endl;
+	if (HT > 40)
+	{
+		cout << "Enhorabuena, Has completado para tu bono.  " << "$"<< ((HT - 40) * 75) << endl;
+	}
+	//7.Crear dos variables de tipo int, que guarden el día y mes, del cumpleaños del usuario. Si la fecha corresponde a mes 9 y día 15, escribir en pantalla, “Feliz cumpleaños”
+	int x = 9;
+	int y = 15;
+	cout<< "ingresa tu fecha de cumpleaños "
+}
+
+
