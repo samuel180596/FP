@@ -1,0 +1,105 @@
+Ejercicio D
+// ejercicio D.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
+//
+
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    //1.16 Diseñar un programa que lea tres números A, B, C y visualice en pantalla el valor del más grande.
+    int A, B, C;
+    cout << "ingresa un numero de 3:  " << endl;
+    cin >> A;
+    cout << "ingresa otro nuemro de 3: " << endl;
+    cin >> B;
+    cout << "ingresa un ultimo numero: " << endl;
+    cin >> C;
+    if (A > B and A > C)
+    {
+        cout << "Este es el numero mayor de los 3.:  " << A << endl;
+    }
+    if (B > A and B > C)
+    {
+        cout << "Este es el numero mayor de los 3.:  " << B << endl;
+    }
+    if (C > A and C > B)
+    {
+        cout << "Este es el numero mayor de los 3.:  " << C << endl;
+    }
+
+    //1.17 Crear un programa que lea tres números diferentes, A, B, C, e imprime los valores máximo y mínimo.El procedimiento consistirá en comparaciones sucesivas de parejas de números.Cree el algoritmo, diagrama de flujo y código en C#
+    int a, b, c;
+    cout << "ingresa un numero de 3:  " << endl;
+    cin >> a;
+    cout << "ingresa otro nuemro de 3: " << endl;
+    cin >> b;
+    cout << "ingresa un ultimo numero: " << endl;
+    cin >> c;
+    if (a > b and a > c) 
+    {
+        cout << "Este es el numero mayor de los 3.:  " << a << endl;
+    }
+    if (b > a and b > c)
+    {
+        cout << "Este es el numero mayor de los 3.:  " << b << endl;
+    }
+    if (c > a and c > b)
+    {
+        cout << "Este es el numero mayor de los 3.:  " << c << endl;
+    }
+    if (a < b and a < c)
+    {
+        cout << "Este es el numero menor de los 3.:  " << a << endl;
+    }
+    if (b < a and b < c)
+    {
+        cout << "Este es el numero menor de los 3.:  " << b << endl;
+    }
+    if (c < a and c < b)
+    {
+        cout << "Este es el numero menor de los 3.:  " << c << endl;
+    }
+    //1.18 Crear un programa al que le solicitemos la hora HH, MM, SS y nos calcule la hora dentro de un segundo más tarde.Leeremos las horas minutos y segundos como números enteros.
+    int HH, MM,SS;
+    cout << " ingrese Hora: " << endl;
+    cin >> HH;
+    cout << " ingrese los Minutos: " << endl;
+    cin >> MM;
+    cout << " ingrese los Segundos: " << endl;
+    cin >> SS;
+    cout << endl;
+    SS++;
+    if (SS >= 59) 
+    {
+        SS = 0;
+        MM++;
+    }
+    if (MM >= 59)
+    {
+        MM = 0;
+        HH++;
+    }
+    if (HH >= 23) 
+    {
+        HH = 0;
+    }
+    cout << "El tiempo actualizado es : " << HH << ":" << MM << ":" << SS << endl;
+    //1.19 Determinar el precio del boleto de ida y vuelta en avión, conociendo la distancia a recorrer y sabiendo que si el número de días de estancia es superior a 7 y la distancia superior a 800 km el billete tiene una reducción del 30 % .El precio por km es de 2.5 dólares.
+    int Dias, Distancia;
+    cout << "Ingrese la cantidad de dias de la estancia: " << endl;
+    cin >> Dias;
+    cout << "Ingrese la Distancia recorridad" << endl;
+    cin >> Distancia;
+    cout << endl;
+    if (Dias > 7 and Distancia > 800)
+    {
+        cout << "El precio con descuento por el viaje es de:  " << "$" << (Distancia * 2.5 * 0.3) << endl;
+    }
+    //1.20 Escribir las instrucciones apropiadas para cada una de las siguientes condiciones: 
+    //a) Si un ángulo es igual a 90 grados, imprimir el mensaje "El ángulo es un ángulo recto" sino imprimir el mensaje "El ángulo no es un ángulo recto".
+    //b) Si la temperatura es superior a 100 grados, visualizar el mensaje “por encima del punto de ebullición del agua” sino visualizar el mensaje “por debajo del punto de ebullición del agua”.
+    //c) Recibir un número, Si este número es positivo, sumar el número a total de positivos usando una variable que acumule los números negativos, sino sumar al total de negativos usando una variable que acumule los números negativos.
+    //d) Si “x” es mayor que “y”, y “z” es menor que “y”, imprimir “x”.e) Si la distancia es mayor que 20 y menos que 35, crear y leer un valor para luna variable de tipo entero llamada “tiempo”.
