@@ -98,8 +98,67 @@ int main()
     {
         cout << "El precio con descuento por el viaje es de:  " << "$" << (Distancia * 2.5 * 0.3) << endl;
     }
-    //1.20 Escribir las instrucciones apropiadas para cada una de las siguientes condiciones: 
-    //a) Si un ángulo es igual a 90 grados, imprimir el mensaje "El ángulo es un ángulo recto" sino imprimir el mensaje "El ángulo no es un ángulo recto".
-    //b) Si la temperatura es superior a 100 grados, visualizar el mensaje “por encima del punto de ebullición del agua” sino visualizar el mensaje “por debajo del punto de ebullición del agua”.
-    //c) Recibir un número, Si este número es positivo, sumar el número a total de positivos usando una variable que acumule los números negativos, sino sumar al total de negativos usando una variable que acumule los números negativos.
-    //d) Si “x” es mayor que “y”, y “z” es menor que “y”, imprimir “x”.e) Si la distancia es mayor que 20 y menos que 35, crear y leer un valor para luna variable de tipo entero llamada “tiempo”.
+            //1.20 Escribir las instrucciones apropiadas para cada una de las siguientes condiciones: 
+        //a) Si un ángulo es igual a 90 grados, imprimir el mensaje "El ángulo es un ángulo recto" sino imprimir el mensaje "El ángulo no es un ángulo recto".
+        int an;
+        cout << "Ingresa el angulo :  " << endl;
+        cin >> an;
+        cout << endl;
+        if (an == 90)
+        {
+            cout << "El angulo es recto. " << endl;
+        }
+        else 
+        {
+            cout << "El angulo no es Recto. " << endl;
+        }
+        //b) Si la temperatura es superior a 100 grados, visualizar el mensaje “por encima del punto de ebullición del agua” sino visualizar el mensaje “por debajo del punto de ebullición del agua”.
+        int temp; 
+        cout << "Temperatura:  " << endl;
+        cin >> temp;
+        cout << endl;
+        if (temp >= 100) 
+        {
+            cout << "por encima del punto de ebullicion del agua. " << endl;
+        }
+        else 
+        {
+            cout << "Por debajo del punto de ebullicion. " << endl;
+        }
+        //c) Recibir un número, Si este número es positivo, sumar el número a total de positivos usando una variable que acumule los números negativos, sino sumar al total de negativos usando una variable que acumule los números negativos.
+        int np;
+        cout << "ingresa un numero. " << endl;
+        cin >> np;
+        cout << endl;
+        if (np <= 0 ) 
+        {
+            np + np;
+            cout << np << endl;
+        }
+        else 
+        {
+            np - np;
+            cout << np << endl;
+        }
+        //d) Si “x” es mayor que “y”, y “z” es menor que “y”, imprimir “x”.
+        int x, y, z;
+        cout << "igrese el valor de X:  ";
+        cin >> x;
+        cout << "igrese el valor de y:  ";
+        cin >> y;
+        cout << "igrese el valor de z:  ";
+        cin >> z;
+        if (x < y and x < z)
+        {
+            cout << x << enld;
+        }
+        //e) Si la distancia es mayor que 20 y menos que 35, crear y leer un valor para una variable de tipo entero llamada “tiempo”.
+        int distancia, tiempo;
+        cout << "ingresa una distancia :  " << endl;
+        cin >> distancia;
+        if (distancia < 20 and distancia > 35) 
+        {
+            distancia = tiempo;
+            cout << tiempo << endl;
+        }
+    }
