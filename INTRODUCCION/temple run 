@@ -1,0 +1,84 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <conio.h>  // Solo en Windows para detectar ESC
+
+using namespace std;
+
+enum Direccion { ADELANTE, IZQUIERDA, DERECHA };
+
+// Función para obtener un valor booleano aleatorio
+bool valorAleatorio() {
+    return rand() % 2 == 0;
+}
+
+int main() {
+    srand(static_cast<unsigned>(time(0)));  // Inicializar la semilla aleatoria
+
+    int tiempo = 12;       // Tiempo (vida) inicial del jugador
+    int distancia = 100;   // Distancia inicial (configurable)
+    Direccion direccion = ADELANTE;
+    char tecla;
+
+    cout << "Bienvenido a Temple Run!" << endl;
+    cout << "Presiona ESC para salir en cualquier momento." << endl;
+
+    while (tiempo > 0 && distancia > 0) {
+        // Mostrar estado actual
+        cout << "Tiempo (vida): " << tiempo << " unidades, Distancia restante: " << distancia << endl;
+        cout << "Direccion actual: ";
+        switch (direccion) {
+            case ADELANTE: cout << "Adelante"; break;
+            case IZQUIERDA: cout << "Izquierda"; break;
+            case DERECHA: cout << "Derecha"; break;
+        }
+        cout << endl;
+
+        // Verificar si hay un obstáculo
+        bool obstaculo = valorAleatorio();
+        if (obstaculo) {
+            cout << "¡Obstaculo encontrado! Tiempo reducido en 3 unidades." << endl;
+            tiempo -= 3;
+        } else {
+            cout << "Camino libre. Tiempo reducido en 1 unidad." << endl;
+            tiempo -= 1;
+        }
+
+        // Verificar si hay un premio
+        bool premio = valorAleatorio();
+        if (premio) {
+            cout << "¡Premio encontrado! Tiempo incrementado en 3 unidades." << endl;
+            tiempo += 3;
+        } else {
+            cout << "Pequeño premio encontrado. Tiempo incrementado en 1 unidad." << endl;
+            tiempo += 1;
+        }
+
+        // Reducir la distancia a medida que el corredor avanza
+        distancia -= 10;
+
+        // Cambiar dirección aleatoriamente
+        int nuevaDireccion = rand() % 3;
+        direccion = static_cast<Direccion>(nuevaDireccion);
+
+        // Verificar si el jugador quiere salir presionando ESC
+        if (_kbhit()) {  // Detecta si se presiona una tecla
+            tecla = _getch();
+            if (tecla == 27) {  // 27 es el código ASCII de ESC
+                cout << "¡Has salido del juego!" << endl;
+                break;
+            }
+        }
+
+        cout << "---------------------------" << endl;
+    }
+
+    // Verificar si el juego terminó por falta de tiempo o distancia
+    if (tiempo <= 0) {
+        cout << "Tiempo agotado. Fin del juego." << endl;
+    } else if (distancia <= 0) {
+        cout << "Has alcanzado la meta. ¡Ganaste!" << endl;
+    }
+
+    return 0;
+}
