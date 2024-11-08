@@ -1,0 +1,85 @@
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+    char opcion;
+    int numero1 = 0, numero2 = 0, total = 0;
+
+    do
+    {
+       
+        cout << "\nMENU DE OPERACIONES ARITMETICAS" << endl;
+        cout << "-------------------------------" << endl;
+        cout << "(+) Suma" << endl;
+        cout << "(-) Resta" << endl;
+        cout << "(*) Multiplicacion" << endl;
+        cout << "(/) Division" << endl;
+        cout << "(%) Residuo" << endl;
+        cout << "(s) Salir" << endl;
+        cout << "Elige una opcion: ";
+        cin >> opcion;
+
+        if (opcion == 's')
+        {
+            cout << "Saliendo del programa..." << endl;
+            break;
+        }
+
+       
+        cout << "Ingresa el primer numero: ";
+        cin >> numero1;
+        cout << "Ingresa el segundo numero: ";
+        cin >> numero2;
+
+      
+        switch (opcion) 
+        {
+        case '+':
+            total = numero1 + numero2;
+            cout << "Resultado de la suma: " << total << endl;
+            break;
+        case '-':
+            total = numero1 - numero2;
+            cout << "Resultado de la resta: " << total << endl;
+            break;
+        case '*':
+            total = numero1 * numero2;
+            cout << "Resultado de la multiplicacion: " << total << endl;
+            break;
+        case '/':
+            if (numero2 != 0) 
+            {
+                total = numero1 / numero2;
+                cout << "Resultado de la division: " << total << endl;
+            }
+            else 
+            {
+                cout << "Error: No se puede dividir entre cero." << endl;
+            }
+            break;
+        case '%':
+            if (numero2 != 0) 
+            {
+                total = numero1 % numero2;
+                cout << "Resultado del residuo: " << total << endl;
+            }
+            else
+            {
+                cout << "Error: No se puede calcular el residuo con divisor cero." << endl;
+            }
+            break;
+        default:
+            cout << "Opcion no valida. Por favor, selecciona una opcion correcta." << endl;
+        }
+
+       
+        numero1 = 0;
+        numero2 = 0;
+        total = 0;
+
+    } while (opcion != 's');
+
+    return 0;
+}
