@@ -1,0 +1,32 @@
+// Menu.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
+//
+
+#include <iostream>
+
+using namespace std;
+int main()
+{
+	srand(time(NULL));
+	int castigo, premio;
+	int vida = 12;
+	cout << "Vida inicial. " << vida << endl;
+	while (vida > 0)
+	{
+		vida--;
+		cout << "consumo. " << vida << endl;
+		castigo = rand() % 2;
+		if (castigo == 1)
+		{
+			vida = vida - 3;
+			cout << "castigo. " << vida << endl;
+		}
+		premio = rand() % 2;
+		if (premio == 1)
+		{
+			vida = vida + 3;
+			cout << "Premio. " << vida << endl;
+		}
+		cout << "Fin ciclo. " << vida << endl;
+	}
+	
+}
