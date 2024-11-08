@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string respuesta;
+
+    do {
+        cout << "¿Quieres salir del ciclo? [SI/NO]: ";
+        cin >> respuesta;
+
+        if (respuesta != "SI" && respuesta != "NO") {
+            cout << "Respuesta no válida. Debes responder estrictamente 'SI' o 'NO' en mayúsculas." << endl;
+        }
+
+    } while (respuesta != "SI");
+
+    cout << "Has salido del ciclo." << endl;
+
+    return 0;
+}
