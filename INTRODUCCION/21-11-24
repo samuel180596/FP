@@ -1,0 +1,12 @@
+Clase. es una estructura que contiene :
+a) Atributos, propiedades, valores
+b) Metodos o funciones.
+su estructura es :
+Objeto.Datos de la clase.
+ejemplo:
+Medios de transporte 
+  1. Autos
+    -Marca, modelo, año HP.()
+  2. Avion
+  3. Barco
+      -acelerar, frenar, maniobrar (Funciones)
