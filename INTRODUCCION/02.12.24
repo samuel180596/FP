@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+//variables globales
+//estructuras /clases
+struct Alumno
+{
+	string nombre;
+	int cuenta;
+};
+int main()
+{
+	Alumno Samuel;
+	Samuel.nombre = "Samuel";
+	Samuel.cuenta = 1234;
+	cout << "Nombre : " << Samuel.nombre << endl;
+	cout << "Cuenta : " << Samuel.cuenta << endl;
+}
