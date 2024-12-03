@@ -15,3 +15,52 @@ int main()
 	cout << "Nombre : " << Samuel.nombre << endl;
 	cout << "Cuenta : " << Samuel.cuenta << endl;
 }
+#include <iostream>
+#include <vector>
+using namespace std;
+//variables globales
+//estructuras /clases
+class Alumno
+{
+	// atributos de la estructura
+public:
+	string nombre;
+	int cuenta;
+	// funciones de la estructura
+public:
+	static void altaAlumno(vector<Alumno> &v) 
+	{
+		Alumno alumno;
+		cout << "Nombre: ";
+		cin >> alumno.nombre;
+		cout << endl;
+		cout << "Cuenta: ";
+		cin >> alumno.cuenta;
+		cout << endl;
+		v.push_back(alumno);
+		
+	}
+	static void imprimeDatos(vector<Alumno> v)
+	{
+		for(auto elemento:v)
+		{
+			cout << "Nombre : " << elemento.nombre << endl;
+			cout << "Cuenta : " << elemento.cuenta << endl;
+		
+		}
+		
+	}
+};
+int main()
+{
+	vector<Alumno> valumno;
+	int numAlumnos;
+	cout << "Cuantos?:  ";
+	cin >> numAlumnos;
+	for(int i =0; i<numAlumnos;i++)
+	{
+		Alumno::altaAlumno(valumno);
+	}
+	Alumno::imprimeDatos(valumno);
+
+}
