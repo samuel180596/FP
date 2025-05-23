@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int opcion;
+	double num1, num2;
+	do
+	{
+		cout << "Calculadora" << endl;
+		cout << "1.-Suma" << endl;
+		cout << "2.-Resta" << endl;
+		cout << "3.-Multiplicacion" << endl;
+		cout << "4.-Division" << endl;
+		cout << "5.-Salida" << endl;
+		cin >> opcion;
+
+		if (opcion >= 1 && opcion <= 4)
+		{
+			cout << "INGRESA UN NUMERO" << endl;
+			cin >> num1;
+			cout << "INGRESA OTRO NUMERO" << endl;
+			cin >> num2;
+
+			switch (opcion)
+			{
+			case 1: cout << "resultado: " << num1 + num2 << endl;
+				break;
+			case 2: cout << "Resultado: " << num1 - num2 << endl;
+				break;
+			case 3: cout << "Resultado: " << num1 * num2 << endl;
+				break;
+			case 4:
+				if (num2 != 0)
+				{
+					cout << "Resultado: " << num1 / num2 << endl;
+				}
+				else
+				{
+					cout << "Error: no se puede dividir por 0" << endl;
+				}
+				break;
+			}
+		}
+		else if (opcion != 5)
+		{
+			cout << "opcion invalida";
+		}
+
+	} while (opcion != 5);
+	cout << "Adios" << endl;
+}
+
